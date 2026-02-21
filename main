@@ -12,12 +12,14 @@ class Engine:
 
 
 
+# класс(пользовательский тип данных) коробки передач
 class Transmission:
     def __init__(self, type:str = "automatic"):
         self.type = type
 
 
 
+# класс(пользовательский тип данных) транспорта с возможностью водить
 class Drivable:
     def __init__(self, wheels_count:int, seats_count:int):
         self.wheels_count = wheels_count
@@ -27,6 +29,7 @@ class Drivable:
         print("driving...")
 
 
+# класс(пользовательский тип данных) машины -> drivable
 class Car(Drivable):
     def __init__(self, transmission:Transmission, engine:Engine, seats_count:int = 5):
         self.transmission = transmission
@@ -35,15 +38,19 @@ class Car(Drivable):
         self.seats_count = seats_count
 
 
+
+# класс(пользовательский тип данных) велосипед -> drivable
 class Bicycle(Drivable):
     def __init__(self, seats_count:int = 1):
         self.wheels_count = 2
         self.seats_count = seats_count
 
 
-kavazaki = Engine(14, 172, 51.3)
+# моторы машин
+Kawasaki Ninja 250 EX250LE 026406 = (172, 14, peterol)
 n52 = Engine(3.0, 268, 300)
 
+# коробки машин
 automatic_transmission = Transmission()
 manual_transmission = Transmission("manual")
 
